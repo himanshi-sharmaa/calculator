@@ -1,6 +1,6 @@
-// import LIGHT from './light';
-// import DARK from './dark';
+import LIGHT from './light';
+import DARK from './dark';
 
-// export {
-//     LIGHT, DARK
-// }
+export {
+    LIGHT, DARK
+}
