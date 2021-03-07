@@ -40,7 +40,11 @@
   padding: 3rem;
   width: 33rem;
 }
-
+.additionalOp {
+  font-size: 5rem;
+  padding: 3rem;
+  width: 33rem;
+}
 .num {
   flex-direction: row;
   margin: 10rem;
@@ -56,5 +60,6 @@
 
 .operator {
   margin: 2rem;
-  font-size: 4rem;
+  margin-top: 3.5rem;
+  font-size: 5rem;
 }

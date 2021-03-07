@@ -7,7 +7,8 @@ function App() {
   const num2=[4,5,6];
   const num3=[7,8,9];
   const num4=[0];  
-  const op = ["Add", "Subtract", "Multiply", "Divide", "="];
+  const op = ["Add", "Subtract", "Multiply", "Divide", "CE","="];
+  const additionOp = ["Sign(+/-)","Square", "Root"];
   
   const [opAdded, SetOpAdded] = useState(false);
   const [updatedNum, setUpdatedNum] = useState(false)
@@ -76,6 +77,19 @@ function App() {
           setCurrentOp("/");
           break;
       case "=" : setCurrentNumber(result);
+            break;
+      case "Sign(+/-)": 
+            setCurrentNumber(-currentNumber);
+            break;
+      case "Square": 
+            setCurrentNumber(currentNumber*currentNumber);
+            break;
+      case "Root": 
+            setCurrentNumber(Math.sqrt(currentNumber));
+            break;   
+      case "CE": 
+            setCurrentNumber("");
+            setResult("");
             break;    
       } 
       setUpdatedNum(false);
@@ -93,6 +107,7 @@ function App() {
       <div className="numContainer">{num2.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
       <div className="numContainer">{num3.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
       <div className="numContainer">{num4.map((data) => <div className="center" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
+      <div className="numContainer">{additionOp.map((data) => <div className="additionalOp" key ={data} onClick={() => { opClickEvent(data) }}>{data}</div>)}</div>
       </div>
       <div className="opStyle">{op.map((data)=> <div className="operator" key={data} onClick={() => { opClickEvent(data) }}>{data}</div>)}</div>
       </div>
