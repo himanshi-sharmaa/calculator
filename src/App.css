@@ -13,6 +13,16 @@
   border-style: solid;
 }
 
+.resultView {
+  text-align: right;
+}
+.center {
+  justify-content: center;
+  font-size: 7rem;
+  padding: 3rem;
+  width: 33rem;
+  align-items: center;
+}
 .subView {
   display: flex;
   justify-content: space-between;
