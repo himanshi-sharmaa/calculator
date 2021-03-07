@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
+import {ThemeProvider} from 'styled-components';
+import {getTheme} from "./getTheme";
+import THEMES from './constants/themes'
+import { Container } from './styles';
+
 function App() {
   
   const num1=[1,2,3];
@@ -10,6 +15,7 @@ function App() {
   const op = ["Add", "Subtract", "Multiply", "Divide", "CE","="];
   const additionOp = ["Sign(+/-)","Square", "Root"];
   
+  const [themeName, setThemeName] = useState(THEMES.LIGHT);
   const [opAdded, SetOpAdded] = useState(false);
   const [updatedNum, setUpdatedNum] = useState(false)
   const [error, setError] = useState(false)
@@ -18,6 +24,7 @@ function App() {
   const [result, setResult] = useState("");
 
   useEffect(()=> {},[currentNumber])
+  
   const numClickEvent = (data) => {
     let num; 
     if(opAdded && !updatedNum){
@@ -96,8 +103,17 @@ function App() {
     }
 
   return (
-   <div className="container">
-     <h1>Calculator</h1>
+  <ThemeProvider theme={getTheme(themeName)}>
+   <Container>
+     <div>
+     <div className="header">
+     <h1 >Calculator</h1>
+     <div className="buttonView">
+     <button className="button" onClick={() => setThemeName(THEMES.LIGHT)}>LIGHT</button>
+     <button className="button" onClick={() => setThemeName(THEMES.DARK)}>DARK</button>
+     </div>
+     </div>
+     </div>
      <div className="resultStyle">
      {error ? <div>Something went wrong</div>:
      <div className="resultView">{currentNumber=== "" && result === ""? "0": currentNumber}</div> }</div>
@@ -111,7 +127,8 @@ function App() {
       </div>
       <div className="opStyle">{op.map((data)=> <div className="operator" key={data} onClick={() => { opClickEvent(data) }}>{data}</div>)}</div>
       </div>
-   </div>
+      </Container>
+   </ThemeProvider>
   );
 }
 

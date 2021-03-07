@@ -5,7 +5,18 @@
   padding: 3rem;
   font-size: medium;
 }
-
+.header {
+  font-size: 2.5rem;
+  justify-content: space-between;
+  display: flex;
+}
+.buttonView {
+  margin: 4rem;
+}
+.button {
+  font-size: 4rem;
+  margin-right: 3rem;
+}
 .resultStyle {
   font-size: 5rem;
   border: #282c34;
