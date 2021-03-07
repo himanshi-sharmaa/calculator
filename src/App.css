@@ -1,26 +1,19 @@
-.container {
-  margin: 30rem;
-  border: #282c34;
-  border-style: solid;
-  padding: 3rem;
-  font-size: medium;
-}
 .header {
-  font-size: 2.5rem;
+  font-size: 10;
   justify-content: space-between;
   display: flex;
 }
 .buttonView {
-  margin: 4rem;
+  margin: 2;
 }
 .button {
-  font-size: 4rem;
-  margin-right: 3rem;
+  font-size: 10;
+  margin-right: 2;
 }
 .resultStyle {
-  font-size: 5rem;
+  font-size: 20;
   border: #282c34;
-  padding-right: 2rem;
+  padding-right: 2;
   border-style: solid;
 }
 
@@ -29,9 +22,9 @@
 }
 .center {
   justify-content: center;
-  font-size: 7rem;
-  padding: 3rem;
-  width: 33rem;
+  font-size: 20;
+  padding: 10;
+  width: 33;
   align-items: center;
 }
 .subView {
@@ -42,35 +35,36 @@
   display: flex;
 }
 .subNumView {
-  width: 95rem;
+  width: 100;
   justify-content: space-between;
 }
 
 .numView {
-  font-size: 7rem;
-  padding: 3rem;
-  width: 33rem;
+  font-size: 20;
+  padding-left: 4em;
+  width: 33;
 }
 .additionalOp {
-  font-size: 5rem;
-  padding: 3rem;
-  width: 33rem;
+  font-size: 20;
+  padding: 10;
+  width: 33;
+  padding-left: 2.5em;
 }
 .num {
   flex-direction: row;
-  margin: 10rem;
-  font-size: 25rem;
+  margin: 10;
+  font-size: 20;
   font-weight: 900;
 }
 
 .opStyle {
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 20;
 }
 
 .operator {
-  margin: 2rem;
-  margin-top: 3.5rem;
-  font-size: 5rem;
+  margin: 2;
+  margin-top: 3;
+  font-size: 5;
 }

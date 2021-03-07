@@ -107,7 +107,7 @@ function App() {
    <Container>
      <div>
      <div className="header">
-     <h1 >Calculator</h1>
+     <h4>Calculator</h4>
      <div className="buttonView">
      <button className="button" onClick={() => setThemeName(THEMES.LIGHT)}>LIGHT</button>
      <button className="button" onClick={() => setThemeName(THEMES.DARK)}>DARK</button>
@@ -122,7 +122,7 @@ function App() {
       <div className="numContainer">{num1.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
       <div className="numContainer">{num2.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
       <div className="numContainer">{num3.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
-      <div className="numContainer">{num4.map((data) => <div className="center" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
+      <div className="numContainer">{num4.map((data) => <div className="numView" key ={data} onClick={() => { numClickEvent(data) }}>{data}</div>)}</div>
       <div className="numContainer">{additionOp.map((data) => <div className="additionalOp" key ={data} onClick={() => { opClickEvent(data) }}>{data}</div>)}</div>
       </div>
       <div className="opStyle">{op.map((data)=> <div className="operator" key={data} onClick={() => { opClickEvent(data) }}>{data}</div>)}</div>
